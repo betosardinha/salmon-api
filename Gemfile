@@ -1,53 +1,45 @@
 source "https://rubygems.org"
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+# Core
 gem "rails", "~> 8.1.4", ">= 8.1.4.1"
-
-gem "pg", ">= 1.7.0"
-
-# Use the Puma web server [https://github.com/puma/puma]
-gem "puma", ">= 5.0"
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-# gem "jbuilder"
-
-# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-gem "bcrypt", "~> 3.1.22"
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem "pg", "~> 1.7"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
-# Use the database-backed adapters for Rails.cache, Active Job, and Action Cable
-gem "solid_cache"
-gem "solid_queue"
-gem "solid_cable"
+# Cache, jobs and WebSockets
+gem "solid_cable", "~> 4.1"
+gem "solid_cache", "~> 1.0"
+gem "solid_queue", "~> 1.7"
 
-# Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
+# Authentication
+gem "bcrypt", "~> 3.1.22"
 
-# Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
-gem "kamal", require: false
+# Deployment
+gem "kamal", "~> 2.12", require: false
 
-# Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
-gem "thruster", require: false
+# Server
+gem "puma", "~> 8.0"
+gem "bootsnap", "~> 1.26", require: false
+gem "thruster", "~> 0.1.27", require: false
 
-# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-gem "image_processing", "~> 1.2"
+# Images
+gem "image_processing", "~> 1.14"
 
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
-# gem "rack-cors"
+# CORS
+gem "rack-cors", "~> 3.0"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  # Debugging
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
-  # Audits gems for known security defects (use config/bundler-audit.yml to ignore issues)
+  # Security
   gem "bundler-audit", require: false
-
-  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
 
-  # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
+  # Linting
   gem "rubocop-rails-omakase", require: false
+end
 
-  gem 'annotaterb', '>= 4.26'
+group :development do
+  # Schema annotations
+  gem "annotaterb", require: false
 end

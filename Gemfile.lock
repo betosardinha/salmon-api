@@ -210,6 +210,9 @@ GEM
     raabro (1.5.0)
     racc (1.8.1)
     rack (3.2.8)
+    rack-cors (3.0.0)
+      logger
+      rack (>= 3.0.14)
     rack-session (2.1.2)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
@@ -349,22 +352,23 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  annotaterb (>= 4.26)
+  annotaterb
   bcrypt (~> 3.1.22)
-  bootsnap
+  bootsnap (~> 1.26)
   brakeman
   bundler-audit
   debug
-  image_processing (~> 1.2)
-  kamal
-  pg (>= 1.7.0)
-  puma (>= 5.0)
+  image_processing (~> 1.14)
+  kamal (~> 2.12)
+  pg (~> 1.7)
+  puma (~> 8.0)
+  rack-cors (~> 3.0)
   rails (~> 8.1.4, >= 8.1.4.1)
   rubocop-rails-omakase
-  solid_cable
-  solid_cache
-  solid_queue
-  thruster
+  solid_cable (~> 4.1)
+  solid_cache (~> 1.0)
+  solid_queue (~> 1.7)
+  thruster (~> 0.1.27)
   tzinfo-data
 
 CHECKSUMS
@@ -457,6 +461,7 @@ CHECKSUMS
   raabro (1.5.0) sha256=3f998a7bc84f9c84df3ab580634d2e0a5bda4f0841168d56035f529c9877440a
   racc (1.8.1) sha256=4a7f6929691dbec8b5209a0b373bc2614882b55fc5d2e447a21aaa691303d62f
   rack (3.2.8) sha256=1fecc85e463ebc7a2a945fff829ffcd549babeb1556384796fad946c28dc4ec7
+  rack-cors (3.0.0) sha256=7b95be61db39606906b61b83bd7203fa802b0ceaaad8fcb2fef39e097bf53f68
   rack-session (2.1.2) sha256=595434f8c0c3473ae7d7ac56ecda6cc6dfd9d37c0b2b5255330aa1576967ffe8
   rack-test (2.3.0) sha256=b118d177cc002c572fc1b6fd8d19c9ed5881a36e8d6f689f9e618f9f861241e8
   rackup (2.3.1) sha256=6c79c26753778e90983761d677a48937ee3192b3ffef6bc963c0950f94688868
