@@ -19,13 +19,13 @@ services:
     tty: true
 
   db:
-    image: postgres:17-alpine
+    image: postgres:18.6-alpine
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
       POSTGRES_DB: salmon_api_development
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres18_data:/var/lib/postgresql
     ports:
       - "5432:5432"
     healthcheck:
@@ -35,5 +35,5 @@ services:
       retries: 5
 
 volumes:
-  postgres_data:
+  postgres18_data:
   bundle_cache:
