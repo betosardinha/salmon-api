@@ -10,7 +10,6 @@ services:
     ports:
       - "3000:3000"
     environment:
-      RAILS_ENV: development
       DATABASE_URL: postgres://postgres:password@db:5432/salmon_api_development
       TEST_DATABASE_URL: postgres://postgres:password@db:5432/salmon_api_test
     depends_on:

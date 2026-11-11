@@ -25,3 +25,9 @@ rollback:
 
 console:
 	$(COMPOSE) run --rm api bundle exec rails c
+
+lint:
+	$(COMPOSE) run --rm api bundle exec rubocop
+
+test:
+	$(COMPOSE) run --rm api bundle exec rspec

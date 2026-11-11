@@ -36,10 +36,24 @@ group :development, :test do
   gem "brakeman", require: false
 
   # Linting
-  gem "rubocop-rails-omakase", require: false
+  gem "rubocop-rails-omakase", "~> 1.1", require: false
+  gem "rubocop-rspec", "~> 3.10", require: false
+
+  # Tests
+  gem "rspec-rails", "~> 8.1"
+  gem "factory_bot_rails", "~> 6.5"
+  gem "faker", "~> 3.8"
 end
 
 group :development do
   # Schema annotations
   gem "annotaterb", require: false
+end
+
+group :test do
+  # One line tests
+  gem "shoulda-matchers", "~> 8.0"
+
+  # HTTP stubs
+  gem "webmock", "~> 3.34"
 end
