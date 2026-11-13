@@ -43,6 +43,9 @@ group :development, :test do
   gem "rspec-rails", "~> 8.1"
   gem "factory_bot_rails", "~> 6.5"
   gem "faker", "~> 3.8"
+
+  # Env files
+  gem "dotenv-rails", "~> 3.2"
 end
 
 group :development do

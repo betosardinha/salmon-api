@@ -19,6 +19,10 @@
 #  index_users_on_email  (email) UNIQUE
 #
 class User < ApplicationRecord
+  include PublicIdentifiable
+
+  public_prefix :user
+
   has_secure_password
 
   has_many :sessions, dependent: :destroy

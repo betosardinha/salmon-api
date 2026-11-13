@@ -22,6 +22,10 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Session < ApplicationRecord
+  include PublicIdentifiable
+
+  public_prefix :sess
+
   belongs_to :user
 
   has_secure_token

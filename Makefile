@@ -31,3 +31,6 @@ lint:
 
 test:
 	$(COMPOSE) run --rm api bundle exec rspec
+
+setup-test:
+	$(COMPOSE) run --rm -e RAILS_ENV=test api bundle exec rails db:prepare
