@@ -24,6 +24,9 @@ gem "thruster", "~> 0.1.27", require: false
 # Images
 gem "image_processing", "~> 1.14"
 
+# Serialization
+gem "active_model_serializers", "~> 0.10.16"
+
 # CORS
 gem "rack-cors", "~> 3.0"
 
