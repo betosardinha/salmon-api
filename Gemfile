@@ -22,7 +22,7 @@ gem "bootsnap", "~> 1.26", require: false
 gem "thruster", "~> 0.1.27", require: false
 
 # Images
-gem "image_processing", "~> 1.14"
+gem "image_processing", "~> 2.2"
 
 # Serialization
 gem "active_model_serializers", "~> 0.10.16"
