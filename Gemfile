@@ -61,5 +61,5 @@ group :test do
   gem "shoulda-matchers", "~> 8.0"
 
   # HTTP stubs
-  gem "webmock", "~> 3.34"
+  gem "webmock", "~> 3.35"
 end
