@@ -17,7 +17,7 @@ gem "bcrypt", "~> 3.1.22"
 gem "kamal", "~> 2.12", require: false
 
 # Server
-gem "puma", "~> 8.0"
+gem "puma", "~> 8.1"
 gem "bootsnap", "~> 1.26", require: false
 gem "thruster", "~> 0.1.27", require: false
 
